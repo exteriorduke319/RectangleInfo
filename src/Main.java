@@ -29,20 +29,21 @@ public class Main {
         } while (!lengthCheck);
 
         do {
+            scan.nextLine();
             System.out.print("Please enter the width of your rectangle: ");
             if (scan.hasNextDouble()) {
                 width = scan.nextDouble();
-                scan.nextLine();
                 if (width > 0) {
                     widthCheck = true;
                 } else {
                     System.out.println("Error: invalid value for width.  Please enter a positive number.");
                 }
             } else {
-                scan.nextLine();
                 System.out.println("Error: invalid value for width.  Please enter a number.");
             }
         } while (!widthCheck);
+
+
 
         area = length*width;
         perimeter = (length*2) + (width *2);
